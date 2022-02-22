@@ -5,6 +5,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="./style.css">
         <title>Maelaïg Bodard - Accueil</title>
     </head>
@@ -23,24 +25,41 @@
             <p>
                 Et dolor nostrum sit magnam nihil eum deleniti doloribus non dolore adipisci. Et ipsum incidunt et pariatur quod ut facilis nesciunt! Ut voluptatem consequuntur est quis nostrum sed quia voluptas non eaque adipisci qui blanditiis voluptatem.
             </p>
-            <a href="./presentation.html">Me découvrir</a>
         </article>
         <article id="article-sophrologie">
             <h2>La sophrologie</h2>
             <p>
                 Et dolor nostrum sit magnam nihil eum deleniti doloribus non dolore adipisci. Et ipsum incidunt et pariatur quod ut facilis nesciunt! Ut voluptatem consequuntur est quis nostrum sed quia voluptas non eaque adipisci qui blanditiis voluptatem.
             </p>
-            <a href="./prestations.html">En savoir plus</a>
+            <div>
+                <a href="./prestations.html#sophrologie" class="savoir-plus">En savoir plus</a>
+            </div>
         </article>
         <article id="article-massage">
             <h2>Les massages</h2>
             <p>
                 Et dolor nostrum sit magnam nihil eum deleniti doloribus non dolore adipisci. Et ipsum incidunt et pariatur quod ut facilis nesciunt! Ut voluptatem consequuntur est quis nostrum sed quia voluptas non eaque adipisci qui blanditiis voluptatem.
             </p>
-            <a href="./prestations.html">En savoir plus</a>
+            <div>
+                <a href="./prestations.html#massage" class="savoir-plus">En savoir plus</a>
+            </div>
         </article>
         <footer>
-
+            <div></div>
         </footer>
+
     </body>
+    <script>
+    $(document).ready(function(){
+      $("#butMenu").click(function(){
+        if (document.getElementById('menu').style.display.trim() == ''){
+            document.getElementById('menu').style.display = 'flex';
+        }
+        else{
+            document.getElementById('menu').style.display = '';
+        }
+        $("#butMenu").text($("#butMenu").text().trim() == "menu" ? "close" : "menu");
+      });
+    });
+    </script>
 </html>
