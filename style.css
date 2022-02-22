@@ -1,0 +1,78 @@
+:root{
+    --clear-blue: rgb(212, 240, 240);
+    --azur-blue: rgb(143, 202, 202);
+    --clear-green: rgba(204, 226, 203, 0.5);
+    --medium-green: rgb(182, 207, 182, 0.75);
+    --dark-green: rgb(151, 193, 169);
+}
+html {
+    height: 100%;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 4.209em;
+}
+
+h2 {
+    font-size: 2.369em;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*************** CUSTOM TAGS ***************/
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+#navbar {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+#menu {
+    display: flex;
+}
+#menu div {
+    display: flex;
+    background-color: var(--clear-green);
+    transition: 0.3s;
+}
+#menu div:hover {
+    background-color: var(--medium-green);
+}
+#menu div a {
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: inherit;
+    text-align: center;
+    vertical-align: middle;
+}
+#menu div a span {
+    margin: 0 20px 0 20px;
+}
+#icon {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-image: url("./img/logo.png");
+    background-size: cover;
+    margin: auto 10px auto 10px;
+}
