@@ -28,3 +28,16 @@ var navbar = `
 </nav>
 `
 document.write(navbar)
+
+
+$(document).ready(function () {
+    $("#butMenu").click(function () {
+        if (document.getElementById('menu').style.display.trim() == '') {
+            document.getElementById('menu').style.display = 'flex';
+        }
+        else {
+            document.getElementById('menu').style.display = '';
+        }
+        $("#butMenu").text($("#butMenu").text().trim() == "menu" ? "close" : "menu");
+    });
+});
