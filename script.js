@@ -28,8 +28,19 @@ var navbar = `
 </nav>
 `
 document.write(navbar)
+document.getElementById('butMenu').addEventListener('click',function () {
+    menu = document.getElementById('menu')
+    butMenu = document.getElementById('butMenu')
+    if (menu.style.display.trim() == '') {
+        menu.style.display = 'flex';
+    }
+    else {
+        menu.style.display = '';
+    }
+    butMenu.innerText = butMenu.innerText.trim() == "menu" ? "close" : "menu";
+})
 
-
+/*
 $(document).ready(function () {
     $("#butMenu").click(function () {
         if (document.getElementById('menu').style.display.trim() == '') {
@@ -41,3 +52,5 @@ $(document).ready(function () {
         $("#butMenu").text($("#butMenu").text().trim() == "menu" ? "close" : "menu");
     });
 });
+
+*/
