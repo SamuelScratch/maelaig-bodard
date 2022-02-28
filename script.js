@@ -39,18 +39,3 @@ document.getElementById('butMenu').addEventListener('click',function () {
     }
     butMenu.innerText = butMenu.innerText.trim() == "menu" ? "close" : "menu";
 })
-
-/*
-$(document).ready(function () {
-    $("#butMenu").click(function () {
-        if (document.getElementById('menu').style.display.trim() == '') {
-            document.getElementById('menu').style.display = 'flex';
-        }
-        else {
-            document.getElementById('menu').style.display = '';
-        }
-        $("#butMenu").text($("#butMenu").text().trim() == "menu" ? "close" : "menu");
-    });
-});
-
-*/

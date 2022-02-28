@@ -1,0 +1,331 @@
+:root{
+    --clear-blue: rgb(212, 240, 240);
+    --azur-blue: rgb(143, 202, 202);
+    --navbar: #f3d7cc;
+    --navbar-hover: #ffffff;
+    --dark-green: rgb(151, 193, 169);
+    --background: #f1dddb;
+    --footer: #e8d7d1;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size:20px;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 3em;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    font-size: 2.369em;
+    font-weight: 300;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+h3 {
+    font-size: 1.777em;
+    font-weight: 300;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+h4 {
+    font-size: 1em;
+    padding-left: 20px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
+    display: block;
+}
+
+/*************** NAVBAR ***************/
+
+#navbar {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: fixed;
+    background-color: var(--navbar);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+    z-index: 50;
+}
+#responsiveBar {
+    background-color: transparent;
+}
+#divButMenu {
+    display: none;
+}
+#menu {
+    display: block;
+}
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    float: right;
+}
+#menu li {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    transition: 0.3s;
+}
+#menu li:hover {
+    background-color: var(--navbar-hover);
+}
+#menu li a {
+    padding: 23px 30px 23px 30px;
+}
+#icon {
+    height: 50px ;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50px;
+    background-image: url("./img/logo_lotus.png");
+    background-size: cover;
+    margin: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25) ;
+}
+.show {
+    display: block;
+}
+/********** HEADER *************/
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    z-index: 49;
+}
+header img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px);
+    transform: scale(1.01);
+}
+#div-savoir-plus {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    margin: 50px 0;
+}
+.savoir-plus {
+    border: solid black;
+    border-width: 0.25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px 15px 10px 15px;
+    display: table;
+    font-size: 1em;
+    margin: 0 50px;
+    transition: 0.3s;
+    width: 110px;
+    text-align: center;
+    background-color: white;
+}
+.savoir-plus:hover {
+    transform: scale(1.05);
+}
+/********** ARTICLES *************/
+article {
+    text-align: justify;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image-article {
+    height: 400px ;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+}
+.image-article img {
+    width: inherit;
+    height: inherit;
+}
+.image-article-rectangle {
+    height: 500px ;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+}
+.image-article-rectangle img {
+    width: inherit;
+    height: inherit;
+}
+/********** FOOTER ************/
+footer {
+    margin-top: 80px;
+    padding: 30px;
+    background-color: var(--footer);
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
+    font-size: 0.7em;
+    font-style: italic;
+}
+/********** PHONES *************/
+
+@media screen and (max-device-width: 850px){
+    body {
+        padding-top: 120px;
+        font-size:20px;
+    }
+    h1 {
+        font-weight: 300;
+        font-size: 4.209em;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    #navbar{
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.50);
+        width: 100%;
+        padding: 0;
+    }
+    #navbar button {
+        border: none;
+        background-color: transparent;
+        height: 100%;
+        font-size: 80px;
+    }
+    #responsiveBar {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--navbar);
+    }
+    #divButMenu {
+        display: block;
+        font-size: 40px;
+    }
+    #menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        display:none;
+    }
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        float: right;
+    }
+    #menu li {
+        padding: 30px;
+        font-size: 2em;
+    }
+    #icon {
+        height: 100px ;
+        width: 100px;
+    }
+    article {
+        width: 90%;
+    }
+    .image-article {
+        height: 600px ;
+        width: 600px;
+    }
+    .image-article-rectangle {
+        height: 600px ;
+    }
+    footer {
+        font-size: 0.6em;
+    }
+    header img {
+        filter: blur(10px);
+    }
+} 
+/************* COMPUTER *************/
+@media screen and (max-width: 850px){
+    header img {
+        height: 100%;
+        filter: blur(10px);
+    }
+    article {
+        width: 90%;
+    }
+    .image-article-rectangle {
+        height: 500px ;
+    }
+}
+@media screen and (max-width: 700px){
+    body {
+        padding-top: 75px;
+        font-size:20px;
+    }
+    #navbar{
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+        width: 100%;
+        padding: 0;
+    }
+    #navbar button {
+        border: none;
+        background-color: transparent;
+        height: 100%;
+        font-size: 40px;
+    }
+    #responsiveBar {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--navbar);
+    }
+    #divButMenu {
+        display: block;
+        font-size: 40px;
+    }
+    #menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        display:none;
+    }
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        float: right;
+    }
+    #menu li {
+        padding: 30px;
+        font-size: 1em;
+    }
+    #icon {
+        height: 55px ;
+        width: 55px;
+    }
+    .image-article-rectangle {
+        height: 400px ;
+    }
+}
