@@ -96,6 +96,7 @@ ul {
     width: 50px;
     overflow: hidden;
     border-radius: 50px;
+    background-color: black;
     background-image: url("./img/logo_lotus.png");
     background-size: cover;
     margin: 10px;
