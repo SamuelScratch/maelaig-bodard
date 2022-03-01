@@ -182,10 +182,28 @@ article {
     width: inherit;
     height: inherit;
 }
+/********** CONTACT ************/
+#contact-area {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+#contact-area a {
+    text-decoration: underline;
+}
+.fa {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+
 /********** FOOTER ************/
 footer {
-    margin-top: 80px;
     padding: 30px;
+    margin-top: 80px;
     background-color: var(--footer);
     box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
     font-size: 0.7em;
@@ -259,10 +277,14 @@ footer {
         height: 600px ;
     }
     footer {
-        font-size: 0.6em;
+        font-size: 1em;
     }
     header img {
         filter: blur(10px);
+    }
+    #contact-area {
+        width: 70%;
+        font-size: 1.777em;
     }
 } 
 /************* COMPUTER *************/
@@ -276,6 +298,9 @@ footer {
     }
     .image-article-rectangle {
         height: 500px ;
+    }
+    #contact-area {
+        width: 70%;
     }
 }
 @media screen and (max-width: 700px){
