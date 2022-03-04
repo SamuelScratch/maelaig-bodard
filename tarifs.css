@@ -1,0 +1,66 @@
+#grille-tarifs {
+    display: flex;
+    margin: 40px auto;
+    justify-content: space-between;
+    width: 1200px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#grille-tarifs h2 {
+    font-size: 1.333em;
+    background-color: #deb3b9;
+    margin: 0;
+    padding: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+#grille-tarifs h3 {
+    font-size: 1.1em;
+    text-align: center;
+}
+#grille-tarifs p {
+    margin-bottom: 0;
+}
+
+.tarifs {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: fit-content;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+.tarifs div {
+    background-color: #eed7da;
+    padding: 10px 0;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+/********** PHONES *************/
+@media screen and (max-device-width: 850px){
+    .tarifs {
+        width: 95%;
+    }
+}
+/************* COMPUTER *************/
+@media screen and (max-width: 1200px){
+    #grille-tarifs {
+        width: 90%;
+    }
+    .tarifs {
+        margin: 30px auto;
+    }
+
+    #grille-tarifs h2 {
+        font-size: 1.777em;
+    }
+    #grille-tarifs h3 {
+        font-size: 1.333em;
+    }
+    #grille-tarifs p {
+        font-size: 1.25em;
+    }
+}
+@media screen and (max-width: 700px){
+}

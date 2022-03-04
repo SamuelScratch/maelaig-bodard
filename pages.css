@@ -5,6 +5,7 @@
     --navbar-hover: #ffffff;
     --dark-green: rgb(151, 193, 169);
     --background: #f1dddb;
+    --article-background : #faf2f1;
     --footer: #e8d7d1;
 }
 html {
@@ -31,9 +32,12 @@ h2 {
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 h3 {
+    margin: 0;
+    padding: 0;
     font-size: 1.777em;
-    font-weight: 300;
+    font-weight: 400;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    text-align: left;
 }
 h4 {
     font-size: 1em;
@@ -157,7 +161,31 @@ article {
     margin-left: auto;
     margin-right: auto;
 }
+#grille-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#grille-article .sous-article {
+    width: 44%;
+}
+#sophrologie div {
+    margin: 20px 0;
+}
+.sous-article {
+    font-size: 16px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 9px 0;
+    background-color: var(--article-background);
+    transition: 0.3s;
+}
+.sous-article:hover {
+    transform: scale(1.05);
+}
 .image-article {
+    margin-top: 40px;
     height: 400px ;
     width: 400px;
     overflow: hidden;
@@ -269,6 +297,17 @@ footer {
     article {
         width: 90%;
     }
+    #grille-article {
+        display: block;
+        font-size: inherit;
+        width: 100%;
+    }
+    #grille-article .sous-article {
+        margin-left: auto;
+        margin-right: auto;
+        margin: 40px auto;
+        width: auto;
+    }
     .image-article {
         height: 600px ;
         width: 600px;
@@ -277,7 +316,7 @@ footer {
         height: 600px ;
     }
     footer {
-        font-size: 1em;
+        font-size: 0.6em;
     }
     header img {
         filter: blur(10px);
@@ -294,6 +333,15 @@ footer {
         filter: blur(10px);
     }
     article {
+        width: 90%;
+    }
+    #grille-article {
+        display: block;
+        font-size: inherit;
+    }
+    #grille-article .sous-article {
+        margin-left: auto;
+        margin-right: auto;
         width: 90%;
     }
     .image-article-rectangle {
